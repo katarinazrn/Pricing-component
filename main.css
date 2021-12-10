@@ -1,0 +1,276 @@
+:root {
+  --background: rgb(236, 234, 238);
+  --background-light: rgb(242, 242, 255);
+  --primary: rgb(161, 54, 248);
+  --text: rgb(121, 121, 121);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+}
+
+#container {
+  margin: 0 auto;
+  box-shadow: 1px 20px 40px rgba(189, 184, 184, 0.658);
+  background-image: url("./background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  text-align: center;
+  height: 90vh;
+  margin-top: 5vh;
+}
+
+#top {
+  height: 16vh;
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+#top-content {
+  padding: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#toggle {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+#toggle button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: var(--text);
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+#toggle span {
+  vertical-align: middle;
+  font-size: 44px;
+  color: var(--primary);
+}
+
+h1 {
+  text-align: center;
+  color: var(--text);
+  margin: 0;
+}
+
+#cards {
+  height: 70vh;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  color: var(--text);
+  border-radius: 10px;
+  float: left;
+  width: 33%;
+  padding: 20px 0;
+  background-color: white;
+  box-shadow: 0 4px 20px 1px rgba(184, 184, 184, 0.459);
+  font-weight: bold;
+  margin: auto 0;
+  height: 60vh;
+  display: table;
+}
+
+.card-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.card.middle {
+  background-image: linear-gradient(
+    var(--primary),
+    var(--primary),
+    rgb(107, 19, 179)
+  );
+  color: white;
+  height: 65vh;
+}
+
+.card button {
+  width: 90%;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 10px 0;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid var(--primary);
+}
+
+.card button:hover {
+  border: 2px solid var(--primary);
+  background-color: white;
+  color: var(--primary);
+}
+
+.card.middle button {
+  background-color: white;
+  border: 2px solid white;
+  color: var(--text);
+}
+
+.card.middle button:hover {
+  border: 2px solid white;
+  background-color: var(--primary);
+  color: white;
+}
+
+.card ul {
+  width: 90%;
+  padding: 0;
+  margin: 10px auto;
+}
+
+.price {
+  display: inline-table;
+  text-align: center;
+  margin: 0;
+}
+
+.price b {
+  font-size: 30px;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.price span {
+  font-size: 40px;
+}
+
+#professional {
+  z-index: 100;
+}
+
+.card li {
+  list-style: none;
+  padding: 12px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.692);
+}
+
+.card.middle li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+}
+
+@media (max-width: 910px) {
+  #cards {
+    width: 90%;
+  }
+  #container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 720px) {
+  #container {
+    width: 95%;
+  }
+
+  #cards {
+    width: 95%;
+  }
+
+  .card {
+    height: 35vh;
+  }
+
+  .card.middle {
+    height: 40vh;
+  }
+
+  #toggle button {
+    font-size: 12px;
+  }
+
+  .price b {
+    font-size: 25px;
+  }
+
+  .price span {
+    font-size: 30px;
+  }
+
+  .card li {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .card button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    margin: 0;
+    background-color: var(--background-light);
+  }
+
+  #top-content {
+    width: 100%;
+  }
+
+  #container {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    background-image: none;
+    box-shadow: none;
+  }
+
+  #toggle button {
+    font-size: 12px;
+  }
+
+  #cards {
+    width: 90%;
+    display: block;
+  }
+
+  .card {
+    width: 100%;
+    float: none;
+    margin: 30px 0;
+    min-height: 70vh;
+  }
+
+  .card li {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .card.middle {
+    height: 55vh;
+  }
+
+  .price b {
+    font-size: 40px;
+  }
+
+  .price span {
+    font-size: 60px;
+  }
+  .card button {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+}
